@@ -36,5 +36,5 @@ Route::get('hello', function () {
 })->name('hello');
 
 Route::get('messageBoard', function () {
-    return Inertia::render('messageBoard');
+    return Inertia::render('MessageBoard');
 })->name('messageBoard');
