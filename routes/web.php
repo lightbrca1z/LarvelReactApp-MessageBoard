@@ -34,3 +34,7 @@ Route::get('hello', function () {
 Route::get('messageBoard', function () {
     return Inertia::render('messageBoard');
 })->name('messageBoard');
+
+Route::get('/health', function () {
+    return 'OK - Laravel is running';
+});
