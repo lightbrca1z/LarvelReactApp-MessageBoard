@@ -38,3 +38,7 @@ Route::get('messageBoard', function () {
 Route::get('/health', function () {
     return 'OK - Laravel is running';
 });
+
+Route::get('/', function () {
+    return 'TOP PAGE - Laravel OK';
+});
