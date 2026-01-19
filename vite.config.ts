@@ -24,4 +24,16 @@ export default defineConfig({
     esbuild: {
         jsx: 'automatic',
     },
+    server: {
+        https: process.env.APP_ENV === 'production' ? false : undefined,
+    },
+    build: {
+        rollupOptions: {
+            output: {
+                assetFileNames: 'assets/[name]-[hash][extname]',
+                chunkFileNames: 'assets/[name]-[hash].js',
+                entryFileNames: 'assets/[name]-[hash].js',
+            },
+        },
+    },
 });
