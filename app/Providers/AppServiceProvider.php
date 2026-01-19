@@ -45,8 +45,10 @@ class AppServiceProvider extends ServiceProvider
             : null
         );
 
-        // 本番環境でHTTPSを強制
-        if (app()->environment('production')) {
+        // 本番環境またはHTTPSリクエストの場合、HTTPSを強制
+        if (app()->environment('production') || 
+            request()->header('X-Forwarded-Proto') === 'https' ||
+            request()->secure()) {
             URL::forceScheme('https');
         }
     }
