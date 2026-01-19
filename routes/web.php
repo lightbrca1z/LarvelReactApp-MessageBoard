@@ -24,7 +24,7 @@ Route::post('/update-message', function(){
     for ($i = 0; $i <= $max; $i++) {
         $total += $i;
     }
-    return response()->json(['message'=>'total'. $total]);
+    return response()->json(['message'=>'total ' . $total]);
 })->name('update-message');
 
 Route::get('hello', function () {

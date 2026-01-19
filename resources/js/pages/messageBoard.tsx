@@ -27,7 +27,7 @@ export default function MessageBoard(): JSX.Element {
                             fontSize: '16px',
                             width:'300px'
                             }} />
-                    <button style={{padding: '8px 16px', marginLeft: '10px', backgroundColor: 'blue', color: 'white'}}type="submit">送信</button>
+                    <button style={{padding: '8px 16px', marginLeft: '10px', backgroundColor: 'blue', color: 'white', border: 'none', borderRadius: '4px', cursor: 'pointer'}} type="submit">送信</button>
                 </form>
             </div>
         </>
