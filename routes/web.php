@@ -4,6 +4,10 @@ use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
 use Laravel\Fortify\Features;
 
+Route::get('/health', function () {
+    return response()->json(['status' => 'OK', 'message' => 'Laravel is running']);
+});
+
 Route::get('/', function () {
     return Inertia::render('welcome', [
         'canRegister' => Features::enabled(Features::registration()),
@@ -34,11 +38,3 @@ Route::get('hello', function () {
 Route::get('messageBoard', function () {
     return Inertia::render('messageBoard');
 })->name('messageBoard');
-
-Route::get('/health', function () {
-    return 'OK - Laravel is running';
-});
-
-Route::get('/', function () {
-    return 'TOP PAGE - Laravel OK';
-});
